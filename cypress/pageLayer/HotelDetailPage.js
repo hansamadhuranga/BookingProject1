@@ -1,5 +1,24 @@
 class HotelDetailPage {
 
+    elements={
+        closewindow: ()=>cy.get('.ffd93a9ecb > .abcc616ec7 > .a83ed08757'),
+        loctionverify:()=>cy.get('h2.hp__hotel-name'),
+        setRoom:()=>cy.get(`span:contains("${price.trim()}")`),
+        setReservation:()=>cy.get('button[type="submit"]'),
+        checkIn:()=>cy.get('input[name="checkin"]'),
+        checkOut:()=>cy.get('input[name="checkout"]'),
+        setPrice:()=>cy.get('div.price'),
+        FName:()=>cy.get('input#firstname'),
+        LName:()=>cy.get('input#lastname'),
+        setEmail:()=>cy.get('input#email'),
+        setFinalDetails:()=>cy.get('button[name="book"]'),
+        finaldetail:()=>cy.get('div.final-details'),
+        finalFName:()=>cy.get('input#firstname'),
+        finalLName:()=>cy.get('input#lastname'),
+        homeNaviagete:()=>cy.get('a[title="Booking.com"]'),
+
+    }
+
     closePopup(){
         cy.get('.ffd93a9ecb > .abcc616ec7 > .a83ed08757').click();
     }

@@ -10,5 +10,13 @@ class HomeTest{
         this.HomePage.setCurrencyToAUD();
     }
 
-    
+    setActionHomePage(){
+        this.HomePage.selectStaysTab();
+        this.HomePage.enterLocation(location);
+        this.HomePage.selectDates(checkInDate, checkOutDate);
+        this.HomePage.setGuests(adults, children, rooms);
+        this.HomePage.clickSearch();
+        this.HomePage.verifyLocation(expectedLocation);
+
+    }
 }
