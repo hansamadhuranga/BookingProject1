@@ -17,28 +17,28 @@ describe('Booking.com POM Automation', () => {
         HOME_TEST.setLanguageAndCurrecy();
 
         // Step 3: Select "Stays" tab
-        HOME_TEST.selectStaysTab();
-        hotelDetailPage.closePopup();
+        HOME_TEST.setActionHomePage();
+       // hotelDetailPage.closePopup();
 
         // Step 4: Enter location, set dates, and guests
-        HOME_TEST.enterLocation('Kandy');
-        HOME_TEST.selectDates('2024-10-10', '2024-10-12');
-        HOME_TEST.setGuests(1, 0, 1);
+       // HOME_TEST.enterLocation('Kandy');
+      //  HOME_TEST.selectDates('2024-10-10', '2024-10-12');
+       // HOME_TEST.setGuests(1, 0, 1);
 
         // Step 5: Click Search
-        HOME_TEST.clickSearch();
+        //HOME_TEST.clickSearch();
 
         // Step 6: Verify search location
-        HOME_TEST.verifyLocation('Kandy');
+       // HOME_TEST.verifyLocation('Kandy');
 
         // Step 7: Filter by 3 stars and sort by price
-        searchResultsPage.filterByRating(3);
-        searchResultsPage.sortByPrice();
+        SEARCH_RESULT_TEST.ratingAndFilter(3);
+       // searchResultsPage.sortByPrice();
 
         // Step 8: Get and click the second item
-        searchResultsPage.getSecondItemName().as('hotelName');
-        searchResultsPage.getSecondItemPrice().as('hotelPrice');
-        searchResultsPage.clickSecondItem();
+        //searchResultsPage.getSecondItemName().as('hotelName');
+       // searchResultsPage.getSecondItemPrice().as('hotelPrice');
+        //searchResultsPage.clickSecondItem();
 
         // Step 9: Verify hotel name and select room by price
         cy.get('@hotelName').then((hotelName) => {

@@ -6,12 +6,12 @@ class SearchResultsTest{
     }
 
 ratingAndFilter(){
-this.SearchResultsPage.filterByRating
-this.SearchResultsPage.sortByPrice
-this.SearchResultsPage.selectSecondItem
-this.SearchResultsPage.getSecondItemName
-this.SearchResultsPage.getSecondItemPrice
-this.SearchResultsPage.clickSecondItem
+this.SearchResultsPage.filterByRating(3);
+this.SearchResultsPage.sortByPrice();
+this.SearchResultsPage.selectSecondItem();
+this.SearchResultsPage.getSecondItemName();
+this.SearchResultsPage.getSecondItemPrice();
+this.SearchResultsPage.clickSecondItem();
 
  }   
 }
