@@ -1,0 +1,13 @@
+{
+  "location": "Kandy",
+  "checkInDate": "2024-10-10",
+  "checkOutDate": "2024-10-12",
+  "adults": 1,
+  "children": 0,
+  "rooms": 1,
+  "rating": 3,
+  "currency": "AUD",
+  "email": "test@example.com",
+  "firstName": "Test",
+  "lastName": "Automation"
+}
