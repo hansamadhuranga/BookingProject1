@@ -17,9 +17,9 @@ class HomePage {
         location:()=>cy.get('#ss')
     }
 
-    // visit() {
-    //     cy.visit('https://www.booking.com');
-    // }
+     visit() {
+         cy.visit('https://www.booking.com');
+     }
 
     setLanguageToEnglishUK() {
         this.elements.languageBtn.click();

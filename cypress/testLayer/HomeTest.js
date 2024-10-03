@@ -20,3 +20,4 @@ class HomeTest{
 
     }
 }
+export default HomeTest;

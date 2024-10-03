@@ -1,36 +1,35 @@
-import HomePage from "../pageLayer/HomePage";
-import HotelDetailPage from "../pageLayer/HotelDetailPage";
-import SearchResultsPage from "../pageLayer/SearchResultsPage";
+import HomeTest from "../testLayer/HomeTest";
+import HotelDetailTest from "../testLayer/HotelDetailsTest";
+import SearchResultsTest from "../testLayer/SearchResultsTest";
 
 describe('Booking.com POM Automation', () => {
 
-    const homePage = new HomePage();
-    const searchResultsPage = new SearchResultsPage();
-    const hotelDetailPage = new HotelDetailPage();
+    const HOME_TEST = new HomeTest();
+    const SEARCH_RESULT_TEST = new SearchResultsTest();
+    const HOTEL_DETAIL_TEST = new HotelDetailTest();
 
     it('should automate the booking process using Page Object Model', () => {
 
         // Step 1: Visit Home Page
-        homePage.visit();
+        HOME_TEST.visit();
 
         // Step 2: Set Language and Currency
-        homePage.setLanguageToEnglishUK();
-        homePage.setCurrencyToAUD();
+        HOME_TEST.setLanguageAndCurrecy();
 
         // Step 3: Select "Stays" tab
-        homePage.selectStaysTab();
+        HOME_TEST.selectStaysTab();
         hotelDetailPage.closePopup();
 
         // Step 4: Enter location, set dates, and guests
-        homePage.enterLocation('Kandy');
-        homePage.selectDates('2024-10-10', '2024-10-12');
-        homePage.setGuests(1, 0, 1);
+        HOME_TEST.enterLocation('Kandy');
+        HOME_TEST.selectDates('2024-10-10', '2024-10-12');
+        HOME_TEST.setGuests(1, 0, 1);
 
         // Step 5: Click Search
-        homePage.clickSearch();
+        HOME_TEST.clickSearch();
 
         // Step 6: Verify search location
-        homePage.verifyLocation('Kandy');
+        HOME_TEST.verifyLocation('Kandy');
 
         // Step 7: Filter by 3 stars and sort by price
         searchResultsPage.filterByRating(3);

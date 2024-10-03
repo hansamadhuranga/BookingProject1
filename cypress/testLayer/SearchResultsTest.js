@@ -1,6 +1,6 @@
 import SearchResultsPage from "../pageLayer/SearchResultsPage";
 
-class HomeTest{
+class SearchResultsTest{
     constructor(){
         this.SearchResultsPage = new SearchResultsPage;
     }
@@ -14,13 +14,5 @@ this.SearchResultsPage.getSecondItemPrice
 this.SearchResultsPage.clickSecondItem
 
  }   
-
-
-
-
-
-
-
-
-
 }
+export default SearchResultsTest;

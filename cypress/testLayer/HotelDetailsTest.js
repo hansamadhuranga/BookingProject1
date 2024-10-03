@@ -19,10 +19,5 @@ setReservationAndDate(){
 
 }
 
-
-
-
-
-
-
 }
+export default HotelDetailTest;
